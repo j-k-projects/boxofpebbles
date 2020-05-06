@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Quality Checks May 5th 2020 | My Box of Pebbles</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Quality Checks May 5th 2020" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Quality check models." />
+<meta property="og:description" content="Quality check models." />
+<link rel="canonical" href="https://j-k-projects.github.io/boxofpebbles/stata/2020/05/05/Data-Quality-Checks.html" />
+<meta property="og:url" content="https://j-k-projects.github.io/boxofpebbles/stata/2020/05/05/Data-Quality-Checks.html" />
+<meta property="og:site_name" content="My Box of Pebbles" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-05-05T00:00:00-05:00" />
+<script type="application/ld+json">
+{"description":"Quality check models.","headline":"Quality Checks May 5th 2020","dateModified":"2020-05-05T00:00:00-05:00","datePublished":"2020-05-05T00:00:00-05:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://j-k-projects.github.io/boxofpebbles/stata/2020/05/05/Data-Quality-Checks.html"},"url":"https://j-k-projects.github.io/boxofpebbles/stata/2020/05/05/Data-Quality-Checks.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/boxofpebbles/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://j-k-projects.github.io/boxofpebbles/feed.xml" title="My Box of Pebbles" /><link rel="shortcut icon" type="image/x-icon" href="/boxofpebbles/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Quality Checks May 5th 2020 | My Box of Pebbles</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Quality Checks May 5th 2020" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Quality check models." />
+<meta property="og:description" content="Quality check models." />
+<link rel="canonical" href="https://j-k-projects.github.io/boxofpebbles/stata/2020/05/05/Data-Quality-Checks.html" />
+<meta property="og:url" content="https://j-k-projects.github.io/boxofpebbles/stata/2020/05/05/Data-Quality-Checks.html" />
+<meta property="og:site_name" content="My Box of Pebbles" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-05-05T00:00:00-05:00" />
+<script type="application/ld+json">
+{"description":"Quality check models.","headline":"Quality Checks May 5th 2020","dateModified":"2020-05-05T00:00:00-05:00","datePublished":"2020-05-05T00:00:00-05:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://j-k-projects.github.io/boxofpebbles/stata/2020/05/05/Data-Quality-Checks.html"},"url":"https://j-k-projects.github.io/boxofpebbles/stata/2020/05/05/Data-Quality-Checks.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+<link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://j-k-projects.github.io/boxofpebbles/feed.xml" title="My Box of Pebbles" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+    <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head><body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/boxofpebbles/">My Box of Pebbles</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/boxofpebbles/about/">About Me</a><a class="page-link" href="/boxofpebbles/search/">Search</a><a class="page-link" href="/boxofpebbles/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Quality Checks May 5th 2020</h1><p class="page-description">Quality check models.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-05-05T00:00:00-05:00" itemprop="datePublished">
+        May 5, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      3 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/boxofpebbles/categories/#stata">stata</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#data-and-model-quality">Data and Model Quality</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#running-model-checks">Running Model Checks</a></li>
+</ul>
+</li>
+</ul><h1 id="data-and-model-quality">
+<a class="anchor" href="#data-and-model-quality" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data and Model Quality</h1>
+
+<p>Loading the data. This new dataset includes the new scaled measures to use as dependent variables.</p>
+
+<pre><code class="language-stata">use "New_Data_May_5th_2020"
+</code></pre>
+
+<p>Running a regression</p>
+
+<pre><code class="language-stata">
+foreach var in natural{
+  qui reg `var' i.condition
+  eststo naturaleee
+  esttab naturaleee, html label title("`: var label `var''") ///
+  nobaselevels ///
+  cells((b(f(2) star) p(f(3))) se(f(2) par)) ///
+  starlevels(* .10 ** .05 *** .01) ///
+  collabels("Coefficient" "p-value") ///
+  coeflabels(_cons "Constant (Control)") ///
+  aic bic legend
+}
+</code></pre>
+
+<p>Output</p>
+
+<table border="0" width="*">
+<caption>Animal or Lab Origin</caption>
+<tr><td colspan="3"><hr></td></tr>
+<tr>
+<td>                    </td>
+<td>         (1)   </td>
+<td>            </td>
+</tr>
+<tr>
+<td>                    </td>
+<td>Animal or Lab Origin   </td>
+<td>            </td>
+</tr>
+<tr>
+<td>                    </td>
+<td> Coefficient   </td>
+<td>     p-value</td>
+</tr>
+<tr><td colspan="3"><hr></td></tr>
+<tr>
+<td>Natural Origin      </td>
+<td>       -0.38** </td>
+<td>       0.014</td>
+</tr>
+<tr>
+<td>                    </td>
+<td>      (0.15)   </td>
+<td>            </td>
+</tr>
+<tr>
+<td>Chinese Conspiracy  </td>
+<td>        0.34** </td>
+<td>       0.024</td>
+</tr>
+<tr>
+<td>                    </td>
+<td>      (0.15)   </td>
+<td>            </td>
+</tr>
+<tr>
+<td>Competitive Frame   </td>
+<td>        0.33** </td>
+<td>       0.032</td>
+</tr>
+<tr>
+<td>                    </td>
+<td>      (0.15)   </td>
+<td>            </td>
+</tr>
+<tr>
+<td>Constant (Control)  </td>
+<td>        3.34***</td>
+<td>       0.000</td>
+</tr>
+<tr>
+<td>                    </td>
+<td>      (0.11)   </td>
+<td>            </td>
+</tr>
+<tr><td colspan="3"><hr></td></tr>
+<tr>
+<td>Observations        </td>
+<td>        1103   </td>
+<td>            </td>
+</tr>
+<tr>
+<td>
+<i>AIC</i>          </td>
+<td>      4414.1   </td>
+<td>            </td>
+</tr>
+<tr>
+<td>
+<i>BIC</i>          </td>
+<td>      4434.1   </td>
+<td>            </td>
+</tr>
+<tr><td colspan="3"><hr></td></tr>
+<tr><td colspan="3">
+* p&lt;.10, ** p&lt;.05, *** p&lt;.01
+</td></tr>
+</table>
+
+<h3 id="running-model-checks">
+<a class="anchor" href="#running-model-checks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Running Model Checks</h3>
+
+<pre><code class="language-stata">%html
+foreach var in natural jumped lab certain bioweapon ///
+cost sue spending research suptrump supfed supcdc ///
+supstate suplocal supmedia steps_1 steps_2 steps_3 ///
+steps_4 steps_5 steps_6 steps_7 origin ///
+personalsteps govsteps costsue{
+
+qui reg `var' i.condition
+eststo `var'm1
+
+// exclude those missing state location
+qui reg `var' i.condition if nostate==0
+eststo `var'm2
+
+// exclude those missing state location
+// and those who were coded as a bad ip
+qui reg `var' i.condition if nostate==0 &amp; blockdummy==0
+eststo `var'm3
+
+// exclude those missing state location
+// and those who were coded as a bad ip
+// and those who spent less than 2 minutes
+// or greater than 25 minutes on the survey
+qui reg `var' i.condition if nostate==0 &amp; blockdummy==0 &amp; suspectshorttime==0 &amp; suspectlongtime==0
+eststo `var'm4
+
+esttab `var'm1 `var'm2 `var'm3 `var'm4 , html  ///
+cells((b(f(2) l(Coef.) star) p(f(3) l(p-value))) se(f(2) l(Std Err) par)) ///
+label ///
+nobaselevels ///
+coeflabel(_cons "Constant (Control)") ///
+mtitles("Main" "NoState" "NoState&amp;IP" "NoState&amp;IP&amp;Time") ///
+collabels("Coef." "p-value") ///
+legend ///
+modelwidth(10) ///
+starlevel(* .10 ** .05 *** .01) ///
+title("`: var label `var''" - Quality Checks) ///
+note(Note: Cell entries are OLS coefficients. Standard errors ///
+are in parentheses. Two-tailed p-values are reported. Model 1 is simple main effects. ///
+Model 2 drops respondents missing state location data. Model 3 drops ///
+respondents missing state location data and those with a flagged IP ///
+address. Model 4 further drops respondents with less than 2 minutes ///
+or greater than 25 minutes on survey time.) ///
+aic bic
+
+coefplot ///
+`var'm1, bylabel(Model 1)  || ///
+`var'm2, bylabel(Model 2) || ///
+`var'm3, bylabel(Model 3) || ///
+`var'm4, bylabel(Model 4) || ///
+, drop(_cons)  ///
+byopts(xrescale col(2) ///
+title("`: var label `var'' - Quality Checks" , size(small))) ///
+mlabel("{it:b} = " + string(@b, "%9.2f") + " , {it:p} = " + string(@pval,"%9.2f")) mlabpos(12) mlabgap(*4) ///
+ciopts(recast(rcap) msize(large) lwidth(0.4)) ///
+xline(0) scheme(plotplain)
+
+graph export `var'qualitychecks.svg, width(4000)
+graph export `var'qualitychecks.pdf
+graph export `var'qualitychecks.png , width(10000)
+}
+</code></pre>
+
+<p>Create Figures</p>
+
+<pre><code class="language-stata">cd "D:\Justin\Research\Other Projects\CoronavirusMTurk\New_US_Sample_New_Treatments\May4th2020\May 5th 2020\New Data\images"
+
+foreach var in natural jumped lab certain bioweapon ///
+cost sue spending research suptrump supfed supcdc ///
+supstate suplocal supmedia steps_1 steps_2 steps_3 ///
+steps_4 steps_5 steps_6 steps_7 origin ///
+personalsteps govsteps costsue{
+coefplot ///
+`var'm1, bylabel(Model 1)  || ///
+`var'm2, bylabel(Model 2) || ///
+`var'm3, bylabel(Model 3) || ///
+`var'm4, bylabel(Model 4) || ///
+, drop(_cons)  ///
+byopts(xrescale col(2) ///
+title("`: var label `var'' - Quality Checks" , size(small))) ///
+mlabel("{it:b} = " + string(@b, "%9.2f") + " , {it:p} = " + string(@pval,"%9.2f")) mlabpos(12) mlabgap(*4) ///
+ciopts(recast(rcap) msize(large) lwidth(0.4)) ///
+xline(0) scheme(plotplain)
+
+graph export `var'qualitychecks.svg , width(4000)
+graph export `var'qualitychecks.pdf
+graph export `var'qualitychecks.png , width(10000)
+}
+</code></pre>
+
+  </div><a class="u-url" href="/boxofpebbles/stata/2020/05/05/Data-Quality-Checks.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/boxofpebbles/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/boxofpebbles/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/boxofpebbles/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" title="fastai"><svg class="svg-icon grey"><use xlink:href="/boxofpebbles/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/boxofpebbles/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
